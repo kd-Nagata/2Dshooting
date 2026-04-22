@@ -13,6 +13,9 @@ public:
 	virtual void Draw()override;
 
 
+
 private:
+
+	int textX = 100;
 
 };
