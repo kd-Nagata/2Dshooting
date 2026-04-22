@@ -16,6 +16,4 @@ public:
 
 private:
 
-	int textX = 100;
-
 };
