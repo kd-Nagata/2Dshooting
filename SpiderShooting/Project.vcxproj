@@ -179,6 +179,7 @@
     <ClInclude Include="src\System\Direct3D\KdModel.h" />
     <ClInclude Include="src\System\Direct3D\KdTexture.h" />
     <ClInclude Include="src\Pch.h" />
+    <ClInclude Include="Src\System\Input\Mouse.h" />
     <ClInclude Include="Src\System\Shader\EffectShader\KdEffectShader.h" />
     <ClInclude Include="Src\System\Shader\KdShaderManager.h" />
     <ClInclude Include="Src\System\Shader\SpriteShader\KdSpriteShader.h" />
@@ -213,6 +214,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Src\System\Input\Mouse.cpp" />
     <ClCompile Include="Src\System\Shader\EffectShader\KdEffectShader.cpp" />
     <ClCompile Include="Src\System\Shader\KdShaderManager.cpp" />
     <ClCompile Include="Src\System\Shader\SpriteShader\KdSpriteShader.cpp" />

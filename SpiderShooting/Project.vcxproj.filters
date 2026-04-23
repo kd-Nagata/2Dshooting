@@ -70,6 +70,9 @@
     <Filter Include="Src\Application\Object\UI">
       <UniqueIdentifier>{2749b646-12bc-47c4-bd4c-b238b5de12ed}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\System\Input">
+      <UniqueIdentifier>{389e48e9-756a-4f5a-aef1-e9f6d69e0e15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -195,6 +198,9 @@
     <ClInclude Include="Src\Application\Object\ObjectBase.h">
       <Filter>Src\Application\Object</Filter>
     </ClInclude>
+    <ClInclude Include="Src\System\Input\Mouse.h">
+      <Filter>Src\System\Input</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -277,6 +283,9 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\UI\UIBase.cpp">
       <Filter>Src\Application\Object\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\System\Input\Mouse.cpp">
+      <Filter>Src\System\Input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
