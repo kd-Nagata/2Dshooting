@@ -2,6 +2,8 @@
 
 class SceneManager;
 
+#include"../Object/UI/UIManager.h"
+
 class SceneBase
 {
 
@@ -18,7 +20,7 @@ public:
 	// シーンに入った時の処理
 	virtual void OnEnter()
 	{
-
+		
 	}
 	// シーンを出る時の処理
 	virtual void OnExit()
@@ -47,8 +49,10 @@ protected:
 
 	// SceneManagerのポインタを持たせる
 	SceneManager* mp_manager = nullptr;
-	// UIManagerのポインタを持たせる
-
+	
+	// UIManagerを持たせる
+	UIManager m_ui;
+	
 	// EffectManagerのポインタを持たせる
 
 

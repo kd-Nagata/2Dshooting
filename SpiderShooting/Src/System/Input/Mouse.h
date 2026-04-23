@@ -72,7 +72,7 @@ private:
 	bool m_prevRightBtn = false;// 前フレ
 
 	// カーソルを表示させるかどうか(ゲーム用カーソル)
-	bool m_view = true;
+	bool m_view = false;
 
 	// マウスカーソルの画像(未実装)
 

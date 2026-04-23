@@ -26,6 +26,7 @@ public:
 private:
 
 	KdTexture m_tex;
+	KdTexture m_startTex;
 
 	Math::Matrix mat;
 

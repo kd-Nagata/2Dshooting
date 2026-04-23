@@ -6,7 +6,7 @@
 void c_Mouse::Update()
 {
 	// カーソルを非表示
-	ShowCursor(false);
+	ShowCursor(true);
 
 	// 前フレームのボタン状態を保存
 	// 押した瞬間や離した瞬間の判定に使う

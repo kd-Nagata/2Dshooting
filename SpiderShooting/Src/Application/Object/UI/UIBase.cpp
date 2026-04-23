@@ -13,7 +13,6 @@ void UIBase::Update()
 	}
 
 	// Hover/Press
-
 	m_isHover = Contains();
 
 	if (m_isHover)

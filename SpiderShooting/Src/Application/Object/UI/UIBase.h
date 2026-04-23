@@ -15,7 +15,7 @@ public:
 	virtual void Draw()override;
 
 	// マウスとの当たり判定
-	virtual bool Contains() { return 0; }// HitRect()
+	virtual bool Contains() { return HitRect(); }// HitRect()
 
 	// function ==========================
 
@@ -33,6 +33,7 @@ public:
 	void SetScale(const Math::Vector2& scale) { m_scale = scale; }
 
 	void MarkForDelete(){}
+	bool IsDelete() const { return m_isDelete; }
 
 protected:
 

@@ -204,8 +204,14 @@ void Application::Execute()
 		// Zバッファクリア
 		D3D.GetDevContext()->ClearDepthStencilView(D3D.GetZBuffer(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1, 0);
 
+		// マウスアップデート
+		MOUSE.Update();
+
 		// ゲーム更新処理
 		g_manager.Update();
+
+		// マウス描画処理
+		MOUSE.DrawMouseCursor();
 
 		// ゲーム描画処理
 		SHADER.m_spriteShader.Begin();

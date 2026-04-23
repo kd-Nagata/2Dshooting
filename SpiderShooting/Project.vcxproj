@@ -164,8 +164,11 @@
     <ClInclude Include="Src\Application\Core\SceneManager.h" />
     <ClInclude Include="Src\Application\Core\SceneTransitionController.h" />
     <ClInclude Include="Src\Application\Enum\TextureType.h" />
+    <ClInclude Include="Src\Application\Enum\UILayer.h" />
     <ClInclude Include="Src\Application\Object\ObjectBase.h" />
     <ClInclude Include="Src\Application\Object\UI\UIBase.h" />
+    <ClInclude Include="Src\Application\Object\UI\UIBtn.h" />
+    <ClInclude Include="Src\Application\Object\UI\UIManager.h" />
     <ClInclude Include="Src\Application\Scene.h" />
     <ClInclude Include="Src\Application\main.h" />
     <ClInclude Include="Src\Application\Scene\GameMain\GameMain.h" />
@@ -198,6 +201,8 @@
     <ClCompile Include="Src\Application\Core\SceneManager.cpp" />
     <ClCompile Include="Src\Application\Core\SceneTransitionController.cpp" />
     <ClCompile Include="Src\Application\Object\UI\UIBase.cpp" />
+    <ClCompile Include="Src\Application\Object\UI\UIBtn.cpp" />
+    <ClCompile Include="Src\Application\Object\UI\UIManager.cpp" />
     <ClCompile Include="Src\Application\Scene.cpp" />
     <ClCompile Include="Src\Application\main.cpp" />
     <ClCompile Include="Src\Application\Scene\GameMain\GameMain.cpp" />

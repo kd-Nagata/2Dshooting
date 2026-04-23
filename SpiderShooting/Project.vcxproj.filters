@@ -201,6 +201,15 @@
     <ClInclude Include="Src\System\Input\Mouse.h">
       <Filter>Src\System\Input</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Object\UI\UIManager.h">
+      <Filter>Src\Application\Object\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Enum\UILayer.h">
+      <Filter>Src\Application\Enum</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\UI\UIBtn.h">
+      <Filter>Src\Application\Object\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -286,6 +295,12 @@
     </ClCompile>
     <ClCompile Include="Src\System\Input\Mouse.cpp">
       <Filter>Src\System\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\UI\UIManager.cpp">
+      <Filter>Src\Application\Object\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\UI\UIBtn.cpp">
+      <Filter>Src\Application\Object\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

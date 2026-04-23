@@ -4,6 +4,18 @@
 
 void TitleScene::OnEnter()
 {
+
+	UIBase* ui;
+
+	// スタートボタン
+	ui = new UIBtn({ 0,100 }, { 1,1 }, { 160,40 }, 0, &m_startTex, Math::Rectangle{ 0,0,320,80 });
+	ui->onClick = [this]()
+		{
+			
+		};
+	m_ui.Add(ui, UILayer::Front);
+
+	m_startTex.Load("Texture/UI/Button/STARTBtn2.png");
 	m_tex.Load("Texture/UI/Picture/kumo.png");
 	SceneBase::OnEnter();
 }
@@ -11,6 +23,7 @@ void TitleScene::OnEnter()
 void TitleScene::OnExit()
 {
 	m_tex.Release();
+	m_startTex.Release();
 	SceneBase::OnExit();
 }
 
@@ -21,13 +34,20 @@ void TitleScene::Update()
 		//mp_manager->RequestChange(std::make_unique<GameMain()>);
 	}
 
+	
+
 	Math::Matrix t = Math::Matrix::CreateTranslation(0, 0, 0);
 	Math::Matrix s = Math::Matrix::CreateScale(1, 1, 1);
 	mat = s * t;
+
+	m_ui.Update();
 }
 
 void TitleScene::Draw()
 {
+	
+	m_ui.Draw();
+
 	SHADER.m_spriteShader.SetMatrix(mat);
 	SHADER.m_spriteShader.DrawTex(&m_tex, 0, 0, &Math::Rectangle{0, 0, 379,400 });
 	
