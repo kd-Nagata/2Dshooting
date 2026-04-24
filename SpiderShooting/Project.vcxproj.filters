@@ -73,6 +73,12 @@
     <Filter Include="Src\System\Input">
       <UniqueIdentifier>{389e48e9-756a-4f5a-aef1-e9f6d69e0e15}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\GameSystem">
+      <UniqueIdentifier>{61ac42b1-e36d-45f1-8ec2-fad24292d0ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Player">
+      <UniqueIdentifier>{b9455424-be12-4166-a8fb-d7aba1911bc3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -210,6 +216,15 @@
     <ClInclude Include="Src\Application\Object\UI\UIBtn.h">
       <Filter>Src\Application\Object\UI</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\GameSystem\TextureManager.h">
+      <Filter>Src\Application\GameSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\GameSystem\GameManager.h">
+      <Filter>Src\Application\GameSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Player\Player.h">
+      <Filter>Src\Application\Object\Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -301,6 +316,15 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\UI\UIBtn.cpp">
       <Filter>Src\Application\Object\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\GameSystem\TextureManager.cpp">
+      <Filter>Src\Application\GameSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\GameSystem\GameManager.cpp">
+      <Filter>Src\Application\GameSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Player\Player.cpp">
+      <Filter>Src\Application\Object\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

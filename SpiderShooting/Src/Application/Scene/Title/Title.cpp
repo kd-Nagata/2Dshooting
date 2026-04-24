@@ -1,5 +1,6 @@
 #include"Title.h"
 #include "../../Core/SceneManager.h"
+#include "../../GameSystem/GameManager.h"
 #include "../GameMain/GameMain.h"
 
 void TitleScene::OnEnter()
@@ -17,6 +18,9 @@ void TitleScene::OnEnter()
 
 	m_startTex.Load("Texture/UI/Button/STARTBtn2.png");
 	m_tex.Load("Texture/UI/Picture/kumo.png");
+
+	GAME.ResetGame();
+
 	SceneBase::OnEnter();
 }
 
@@ -34,7 +38,7 @@ void TitleScene::Update()
 		//mp_manager->RequestChange(std::make_unique<GameMain()>);
 	}
 
-	
+	GAME.Update();
 
 	Math::Matrix t = Math::Matrix::CreateTranslation(0, 0, 0);
 	Math::Matrix s = Math::Matrix::CreateScale(1, 1, 1);
@@ -48,8 +52,10 @@ void TitleScene::Draw()
 	
 	m_ui.Draw();
 
-	SHADER.m_spriteShader.SetMatrix(mat);
-	SHADER.m_spriteShader.DrawTex(&m_tex, 0, 0, &Math::Rectangle{0, 0, 379,400 });
+	GAME.GetPlayer().Draw();
+
+	//SHADER.m_spriteShader.SetMatrix(mat);
+	//SHADER.m_spriteShader.DrawTex(&m_tex, 0, 0, &Math::Rectangle{0, 0, 379,400 });
 	
 	SHADER.m_spriteShader.SetMatrix(Math::Matrix::Identity);
 	SHADER.m_spriteShader.DrawString(0, 0, "hello", Math::Vector4(1, 1, 0, 1));
