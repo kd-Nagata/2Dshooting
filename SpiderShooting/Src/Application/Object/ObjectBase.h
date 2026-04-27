@@ -7,6 +7,7 @@ public:
 	virtual ~ObjectBase() = default;
 
 	// 基本
+	virtual void PreUpdate() {};
 	virtual void Update() = 0;
 	virtual void Draw() = 0;
 
@@ -16,7 +17,8 @@ public:
 		// 行列の合成
 		Math::Matrix t = Math::Matrix::CreateTranslation(m_pos.x, m_pos.y, 0);
 		Math::Matrix s = Math::Matrix::CreateScale(m_scale.x, m_scale.y, 1);
-		m_mat = s * t;
+		Math::Matrix r = Math::Matrix::CreateRotationZ(DirectX::XMConvertToRadians(m_rot.x));
+		m_mat = s * r * t;
 	}
 
 	// ワールド座標をスクリーン座標に変換して渡す行列計算を行う関数
@@ -49,6 +51,8 @@ protected:
 	Math::Vector2 m_pos = {};
 	Math::Vector2 m_move = {};
 	Math::Vector2 m_scale = {};
+	Math::Vector2 m_rot = {};
+	// 構造体でまとめてもいいかもよ↑
 
 	KdTexture* mp_tex = nullptr;
 	Math::Matrix m_mat;

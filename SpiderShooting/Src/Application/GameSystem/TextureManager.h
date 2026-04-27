@@ -16,6 +16,6 @@ private:
 private:
 
 	// 画像のリスト
-	std::unordered_map<std::string, KdTexture> m_textureCache;
+	std::unordered_map<std::string, std::unique_ptr<KdTexture>> m_textureCache;
 
 };

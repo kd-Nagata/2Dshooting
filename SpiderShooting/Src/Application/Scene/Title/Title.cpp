@@ -52,7 +52,10 @@ void TitleScene::Draw()
 	
 	m_ui.Draw();
 
-	GAME.GetPlayer().Draw();
+	/*SHADER.m_spriteShader.SetMatrix(Math::Matrix::Identity);
+	SHADER.m_spriteShader.DrawTex(TEX.GetTexture(TextureType::Player, "Player1"), Math::Rectangle(0,0,128,128));*/
+
+	PLAYER.Draw();
 
 	//SHADER.m_spriteShader.SetMatrix(mat);
 	//SHADER.m_spriteShader.DrawTex(&m_tex, 0, 0, &Math::Rectangle{0, 0, 379,400 });

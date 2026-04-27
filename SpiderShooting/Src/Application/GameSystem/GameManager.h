@@ -29,6 +29,7 @@ public:
 	// (未実装)
 	void Update()
 	{
+		m_player.PreUpdate();
 		m_player.Update();
 	}
 
@@ -66,3 +67,5 @@ public:
 #define GAME GameManager::GetInstance()
 
 #define TEX GameManager::GetInstance().GetTexture()
+
+#define PLAYER GameManager::GetInstance().GetPlayer()

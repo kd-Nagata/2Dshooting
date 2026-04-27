@@ -1,6 +1,6 @@
 #include "TextureManager.h"
 
-// (未実装)
+// 完成！(unique_ptrにすることにより解決)
 
 
 KdTexture* TextureManager::GetTexture(TextureType type, std::string fileName)
@@ -20,25 +20,22 @@ KdTexture* TextureManager::GetTexture(TextureType type, std::string fileName)
 	auto it = m_textureCache.find(fullPath);
 	if (it != m_textureCache.end())
 	{
-		return &it->second;
+		return it->second.get();
 	}
 
 	// キャッシュに無ければ新規でロード
-	KdTexture tex;
-	if (!tex.Load(fullPath))
+	auto tex = std::make_unique<KdTexture>();
+	if (!tex->Load(fullPath))
 	{
 		return nullptr;
 	}
 
 	// コピー/代入禁止でも emplaceとmoveでマップクラスの仲で直接構築
-	
 	auto result = m_textureCache.emplace(fullPath, std::move(tex));
-	
-	//auto result = m_textureCache.emplace(fullPath, std::move(tex));	// std::move は右辺値として扱うためのキャスト	
 	// ↑↑ ここあんまり理解できないから要勉強
 
 
-	return &result.first->second;
+	return result.first->second.get();
 }
 
 // テクスチャタイプによって頭につけるファイルパスを返す
@@ -58,7 +55,6 @@ std::string TextureManager::GetBasePath(TextureType type) const
 	case TextureType::Button:	return Base + "UI/Button/";				break;
 	default: break;
 	}
-
 
 	return " ";
 }
